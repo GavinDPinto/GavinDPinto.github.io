@@ -68,7 +68,7 @@ jobs:
   deploy:
       environment:
         name: deployment-previews
-        url: ${{ steps.deployment.outputs.page_url }}/pr-preview-${{ github.event.pull_request.number }}
+        url: ${{ steps.deployment-previews.outputs.page_url }}/pr-preview-${{ github.event.pull_request.number }}
       runs-on: ubuntu-latest
       needs: build
       steps:
